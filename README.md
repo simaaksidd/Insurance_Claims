@@ -44,3 +44,14 @@ ggplot(frequency_insurance, aes(x = Complaint_type, y = Frequency, fill = Compla
 ```
 
 Hypothesis 2: 
+
+
+
+
+
+
+
+
+
+Reference:
+https://data.texas.gov/dataset/Insurance-complaints-All-data/ubdr-4uff
