@@ -1,17 +1,10 @@
-**What is insurance claim and why does it matter?**
+**What is insurance claim and why does it matter?**. Insurance claims is made by the policyholder to an insurance company for financial compensation or coverage for a loss under the term of an insurance policy. If a event occur that causes loss to things such as property, illness, accident, or damage, the policyholder can file a claim to receive financial compensation from the insurance company. Insurance are important because it provides financial protection against unexpected losses. Without insurance, individuals and businesses might face financial hardships due to unexpected losses and risks. 
 
-
-Insurance claims is made by the policyholder to an insurance company for financial compensation or coverage for a loss under the term of an insurance policy. If a event occur that causes loss to things such as property, illness, accident, or damage, the policyholder can file a claim to receive financial compensation from the insurance company. Insurance are important because it provides financial protection against unexpected losses. Without insurance, individuals and businesses might face financial hardships due to unexpected losses and risks. 
-
-**Our data:**
-
-
-Our project is on the data set gathered from insurance claims in Texas. This data set is from texas.gov and gives out information such as the complaint type, complaint confirmation, and how it was resolved. The Texas Insurance Claims Dataset is a comprehensive repository of insurance claims filed within the state of Texas, providing valuable insights into the insurance landscape in this region. This dataset encompasses a range of insurance types, including auto, home, health, and property insurance claims collected over a multi-year period. It contains detailed information about each claim, such as the claimant's demographic data, policy details, claim amount, claim date, and the cause of the claim, whether it be related to accidents, natural disasters, or other incidents. Additionally, the dataset includes geographical information, allowing for spatial analysis and regional comparisons, as Texas is known for its diverse climate and varying risk factors across different regions.
+**Our data:**. Our project is on the data set gathered from insurance claims in Texas. This data set is from texas.gov and gives out information such as the complaint type, complaint confirmation, and how it was resolved. The Texas Insurance Claims Dataset is a comprehensive repository of insurance claims filed within the state of Texas, providing valuable insights into the insurance landscape in this region. This dataset encompasses a range of insurance types, including auto, home, health, and property insurance claims collected over a multi-year period. It contains detailed information about each claim, such as the claimant's demographic data, policy details, claim amount, claim date, and the cause of the claim, whether it be related to accidents, natural disasters, or other incidents. Additionally, the dataset includes geographical information, allowing for spatial analysis and regional comparisons, as Texas is known for its diverse climate and varying risk factors across different regions.
 
 Our dataset can be accessed [here][https://data.texas.gov/dataset/Insurance-complaints-All-data/ubdr-4uff].
 
-**Our goal:**
-Our goal is to take note of and provide for relations between the different information gathered within our dataset. Our hypothesis would include the relationships between the parties involved in the case, the reasoning behind the complaint itself, and the time taken to receive and close the cases. Our group would like to gain more information on the factors at play within insurance using the different data types as a guide. For example, one hypothesis we came up with was that the most frequent insurance claim was filed as a life, accident, or health claim. Using correlations, our group plans to find important conclusions within the insurance industry in Texas.
+**Our goal:**. Our goal is to take note of and provide for relations between the different information gathered within our dataset. Our hypothesis would include the relationships between the parties involved in the case, the reasoning behind the complaint itself, and the time taken to receive and close the cases. Our group would like to gain more information on the factors at play within insurance using the different data types as a guide. For example, one hypothesis we came up with was that the most frequent insurance claim was filed as a life, accident, or health claim. Using correlations, our group plans to find important conclusions within the insurance industry in Texas.
 
 
 **Types of Insurance Analyzed**
@@ -63,8 +56,7 @@ The other insurance coverage are not as popular as the two that are mentioned. B
 
 
 
-**Hypothesis 1:**
-The type of insurance complaints that relates to "Life, Accident, and Health" issues will be the most frequent among the various of insurance complaints. This type of insurance are the highest due to numerous factors:
+**Hypothesis 1:**. The type of insurance complaints that relates to "Life, Accident, and Health" issues will be the most frequent among the various of insurance complaints. This type of insurance are the highest due to numerous factors:
 
 -   complaints about medical procedures coverage
 -   complaints about the policy
@@ -104,10 +96,15 @@ ggplot(frequency_insurance, aes(x = Complaint_type, y = Frequency, fill = Compla
 
 
 ```
-**Visualization 1:** This bar plot only display three out of sixteen insurance types. These three insurance types are the top three that received the most complaints from customers. As a result, our hypoth
+**Visualization 1:** 
+This bar plot only display three out of sixteen insurance types. These three insurance types are the top three that received the most complaints from customers. Based off the graph, our hypothesis is not correlated to the visualization. As a result, Property and Casualty category received the most complaints out of all complaints. This maybe due to couple of reasons:
+-   claim complexity: claims related to damage can involve into complex assessments and negotiation
+-   property and claims are higher that expected: high frequency of complaints due to claim denials or disettlement
+Although Property and Casualty complaints are on top of the chart, Life, Accident and Health complaints is not far behind. 
 
 
-Hypothesis 2: Insurance companies that process insurance claims receives fewer complaints. Life insurance tends to take the longest because claims like this can involve suspicious circumstances that may prolong the claim processing time. Additionally, it takes time for the insurance companies to ensure the claim is legitimate. 
+**Hypothesis 2:** 
+Insurance companies that process insurance claims receives fewer complaints. Life insurance tends to take the longest because claims like this can involve suspicious circumstances that may prolong the claim processing time. Additionally, it takes time for the insurance companies to ensure the claim is legitimate. 
 
 ```{r}
 
