@@ -54,7 +54,6 @@ The other insurance coverage is less popular than the two that are mentioned. Ho
 
 
 
-
 **Hypothesis 1:**
 The type of insurance complaints related to "Life, Accident, and Health" issues will be the most frequent among the various insurance complaints. This type of insurance is the highest due to numerous factors:
 
