@@ -1,7 +1,11 @@
 **What is insurance claim and why does it matter?**
+
+
 Insurance claims is made by the policyholder to an insurance company for financial compensation or coverage for a loss under the term of an insurance policy. If a event occur that causes loss to things such as property, illness, accident, or damage, the policyholder can file a claim to receive financial compensation from the insurance company. Insurance are important because it provides financial protection against unexpected losses. Without insurance, individuals and businesses might face financial hardships due to unexpected losses and risks. 
 
 **Our data:**
+
+
 Our project is on the data set gathered from insurance claims in Texas. This data set is from texas.gov and gives out information such as the complaint type, complaint confirmation, and how it was resolved. The Texas Insurance Claims Dataset is a comprehensive repository of insurance claims filed within the state of Texas, providing valuable insights into the insurance landscape in this region. This dataset encompasses a range of insurance types, including auto, home, health, and property insurance claims collected over a multi-year period. It contains detailed information about each claim, such as the claimant's demographic data, policy details, claim amount, claim date, and the cause of the claim, whether it be related to accidents, natural disasters, or other incidents. Additionally, the dataset includes geographical information, allowing for spatial analysis and regional comparisons, as Texas is known for its diverse climate and varying risk factors across different regions.
 
 Our dataset can be accessed [here][https://data.texas.gov/dataset/Insurance-complaints-All-data/ubdr-4uff].
