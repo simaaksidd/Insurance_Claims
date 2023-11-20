@@ -141,7 +141,10 @@ plot
 In the above bar graph, we wanted to see how long a claim stays open or how long it takes insurance companies to resolve it. Using the "Received date" and "Closed date" columns from the data set, we found when the claim stayed open. From there, we compared the average time for each insurance coverage type with the other types. It turns out that Life and annuity coverage and the Accident and Health coverage's claim life span are pretty close. One reason for this might be due to the high frequency of claims from the policyholders and the high frequency of disputes from insurance companies. 
 
 **Hypothesis 3:**
-Insurance companies often make errors, which lead to complaints. These errors can take time to investigate and correct. So, if a complaint is confirmed, the processing time will be longer than if a complaint was not confirmed. 
+Insurance companies often make errors, which lead to complaints. These errors can take time to investigate and correct. So, if a complaint is confirmed, the time the claim stayed open will be longer than if a complaint was not confirmed. 
+
+**Hypothesis 4:**
+Complaints that are filed by organizations can be more complex, leading to longer perriods of time they take to resolve. Becuase of this, organizational-filed claims may have longer times that the complaint file stays open. 
 
 
 
