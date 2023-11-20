@@ -43,7 +43,7 @@ p + theme(legend.text = element_text(size = 8),
 
 
 ```
-The pie graph above displays the types of insurance coverage that are analyzed in this data set. As you can see, Automobile and Accident and Health insurance coverage consist of most portion of the pie. These two types of coverage are among the most popular types of insurance coverage for several reasons:
+The pie graph above displays the types of insurance coverage that are analyzed in this data set. As you can see, Automobile and Accident and Health insurance coverage consist of most portion of the pie. These two types of coverage are among the most popular types of insurance coverage for several reasons: 
 
 -   Everyday Necessities
 -   Legal Requirement
@@ -139,6 +139,11 @@ plot
 ```
 **Visualization 2:**
 In the above bar graph, we wanted to see how long a claim stays open or how long it takes insurance companies to resolve it. Using the "Received date" and "Closed date" columns from the data set, we found when the claim stayed open. From there, we compared the average time for each insurance coverage type with the other types. It turns out that Life and annuity coverage and the Accident and Health coverage's claim life span are pretty close. One reason for this might be due to the high frequency of claims from the policyholders and the high frequency of disputes from insurance companies. 
+
+**Hypothesis 3:**
+Insurance companies often make errors, which lead to complaints. These errors can take time to investigate and correct. So, if a complaint is confirmed, the processing time will be longer than if a complaint was not confirmed. 
+
+
 
 **Reference:**
 "Insurance Claims and Policy Processing Clerks." Career Information Center, edited by Kristin B. Mallegg and Joseph Palmisano, 10th ed., vol. 6: Finance, Macmillan Reference USA, 2014, pp. 52-55. Gale In Context: College, link.gale.com/apps/doc/CX3723700249/CSIC?u=txshracd2598&sid=bookmark-CSIC&xid=60a07f3d. Accessed 6 Oct. 2023.
