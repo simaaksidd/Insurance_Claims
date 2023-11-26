@@ -137,6 +137,32 @@ plot
 
 **Visualization 2:** In the above bar graph, we wanted to see how long a claim stays open or how long it takes insurance companies to resolve it. Using the "Received date" and "Closed date" columns from the data set, we found when the claim stayed open. From there, we compared the average time for each insurance coverage type with the other types. It turns out that Life and annuity coverage and the Accident and Health coverage's claim life span are pretty close. One reason for this might be due to the high frequency of claims from the policyholders and the high frequency of disputes from insurance companies.
 
+
+**Hypothesis 3:** Insurance companies often make errors, which lead to complaints. These errors can take time to investigate and correct. So, if a complaint is confirmed, the time the claim stayed open will be longer than if a complaint was not confirmed. 
+
+```{r, echo=FALSE, message=FALSE}
+#Finding the average resolution time 
+average_times <- Insurance_complaints_All_data %>%
+  group_by(Confirmed.complaint) %>%
+  summarise(Average_Time = mean(Resolved_time, na.rm = TRUE))
+
+#Plotting a bar chart showing Average resolution time for Confirmed and Unconfirmed complaints. 
+ggplot(average_times, aes(x = as.factor(Confirmed.complaint), y = Average_Time)) +
+ geom_bar(stat = "identity", position = position_dodge(), aes(fill = as.factor(Confirmed.complaint))) +
+  geom_text(aes(label = round(Average_Time, 1), y = Average_Time + 1), # Adjust the y position as needed
+            position = position_dodge(width = 0.9), 
+            vjust = -0.5) +
+  scale_y_continuous(limits = c(0, max(average_times$Average_Time) * 1.2)) + # Extend y-axis by 20%
+  scale_fill_manual(values = c("blue", "red")) + # Assign custom colors
+  labs(title = "Average Resolution Time: Confirmed vs Unconfirmed Complaints",
+       x = "Complaint Confirmed",
+       y = "Average Resolution Time (Days)") +
+  theme_minimal()
+
+```
+
+**Visualization 3:** In the bar graph above, we wanted to visualize how long each claim was open on average for both confirmed and unconfired complaints. As we hypothesized, there is longer average complaint resolution time for confimred complaints. This means that one average, confirmed complaints to take longer to resolve. 
+
 **Reference:**
 "Insurance Claims and Policy Processing Clerks." Career Information Center, edited by Kristin B. Mallegg and Joseph Palmisano, 10th ed., vol. 6: Finance, Macmillan Reference USA, 2014, pp. 52-55. Gale In Context: College, link.gale.com/apps/doc/CX3723700249/CSIC?u=txshracd2598&sid=bookmark-CSIC&xid=60a07f3d. Accessed 6 Oct. 2023.
 
