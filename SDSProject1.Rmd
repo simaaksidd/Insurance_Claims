@@ -163,6 +163,30 @@ ggplot(average_times, aes(x = as.factor(Confirmed.complaint), y = Average_Time))
 
 **Visualization 3:** In the bar graph above, we wanted to visualize how long each claim was open on average for both confirmed and unconfired complaints. As we hypothesized, there is longer average complaint resolution time for confimred complaints. This means that one average, confirmed complaints to take longer to resolve. 
 
+**Hypothesis 4:**
+Complaints that are filed by organizations can be more complex, leading to longer periods of time they take to resolve. Becuase of this, organizational-filed claims may have longer times that the complaint file stays open. 
+
+```{r, echo=FALSE, message=FALSE}
+
+# Calculate the average resolution time for each type of complainant
+average_resolution_times <- Insurance_complaints_All_data %>%
+  group_by(Complainant.type) %>%
+  summarise(Average_Resolved_Time = mean(Resolved_time, na.rm = TRUE))
+
+# Now, we create a bar plot
+ggplot(average_resolution_times, aes(x = Complainant.type, y = Average_Resolved_Time, fill = Complainant.type)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = round(Average_Resolved_Time, 2), y = Average_Resolved_Time + 1), vjust = -0.5) +
+  scale_fill_brewer(palette = "Set1") +
+  labs(title = "Average Resolution Time by Complainant Type",
+       x = "Complainant Type",
+       y = "Average Resolution Time (Days)") +
+  theme_minimal()
+
+```
+
+**Visualization 4:** As seen in the bar graph above, compalints filed by Organizations result in a longer average resoultion period than those filed by individuals. 
+
 **Reference:**
 "Insurance Claims and Policy Processing Clerks." Career Information Center, edited by Kristin B. Mallegg and Joseph Palmisano, 10th ed., vol. 6: Finance, Macmillan Reference USA, 2014, pp. 52-55. Gale In Context: College, link.gale.com/apps/doc/CX3723700249/CSIC?u=txshracd2598&sid=bookmark-CSIC&xid=60a07f3d. Accessed 6 Oct. 2023.
 
