@@ -1,0 +1,60 @@
+Insurance_complaints__All_data <- read.csv("Insurance_complaints__All_data.csv")
+
+# Hypothesis 1 Visualization
+
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Count the frequency of each reason for complaint and get the top 5 reasons
+top_reasons_data <- Insurance_complaints__All_data %>%
+  count(Reason.complaint.filed) %>%
+  top_n(5, n) %>%
+  arrange(desc(n))
+
+# Plot
+ggplot(top_reasons_data, aes(x = reorder(Reason.complaint.filed, n), y = n, fill = Reason.complaint.filed)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = n), vjust = -0.5) + # Add count labels
+  labs(title = "Top 5 Reasons for Insurance Complaints",
+       x = "Reason for Complaint",
+       y = "Number of Complaints") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Adjust the x-axis labels for readability
+
+insurance_claims <- read.csv("insurance_claims.csv")
+
+# Hypothesis 2 visualization
+
+# Count the number of fraud cases for each education level
+education_fraud_data <- insurance_claims %>%
+  group_by(insured_education_level) %>%
+  summarize(Count_of_Fraud_Reported = sum(fraud_reported == "Y", na.rm = TRUE)) %>%
+  arrange(desc(Count_of_Fraud_Reported))
+
+# Plot with count labels
+ggplot(education_fraud_data, aes(x = insured_education_level, y = Count_of_Fraud_Reported, fill = insured_education_level)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  geom_text(aes(label = Count_of_Fraud_Reported), vjust = -0.5) +
+  labs(title = "Count of Fraud Reported by Education Level",
+       x = "Education Level",
+       y = "Count of Fraud Reported") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) # Adjust the x-axis labels for readability
+
+# Hypothesis 3 Visualization
+
+# Count the number of fraud cases for each status of police report availability
+police_report_fraud_data <- insurance_claims %>%
+  filter(police_report_available %in% c("YES", "NO")) %>%
+  group_by(police_report_available) %>%
+  summarize(Count_of_Fraud_Reported = sum(fraud_reported == "Y", na.rm = TRUE))
+
+# Plot with count labels
+ggplot(police_report_fraud_data, aes(x = police_report_available, y = Count_of_Fraud_Reported, fill = police_report_available)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  geom_text(aes(label = Count_of_Fraud_Reported), vjust = -0.5) +
+  labs(title = "Count of Fraud Reported With and Without Police Report",
+       x = "Police Report Available",
+       y = "Count of Fraud Reported") +
+  theme_minimal()
